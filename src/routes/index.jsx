@@ -1,13 +1,14 @@
 import { PublicRoutes } from "./publicRoutes";
 import { PrivateRoutes } from "./privateRoutes";
+import { UserContext } from "../contexts/userContext";
+import { useContext } from "react";
 
 function RoutesApp() {
-    const user = false;
-
-    if (user) {
-        return <PrivateRoutes />;
+    const { isLogged } = useContext(UserContext);
+    if (isLogged == false) {
+        return <PublicRoutes />;
     }
-    return <PublicRoutes />;
+    return <PrivateRoutes />;
 }
 
 export { RoutesApp };
