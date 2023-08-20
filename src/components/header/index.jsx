@@ -11,11 +11,17 @@ function Header() {
             route: "/newpharmacy",
             description: "New Pharmacy",
         },
+        {
+            route: "/pharmacies",
+            description: "Pharmacys",
+        },
     ];
     return (
         <header>
-            {pages.map((page) => (
-                <Link to={page.route}>{page.description}</Link>
+            {pages.map((page, key) => (
+                <Link key={key} to={page.route}>
+                    {page.description}
+                </Link>
             ))}
         </header>
     );
