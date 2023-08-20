@@ -1,6 +1,7 @@
 import React from "react";
 import { UserContext } from "../../contexts/userContext";
 import { useContext } from "react";
+import Header from "../../components/header";
 
 function Medications() {
     const { setIsLogged } = useContext(UserContext);
@@ -11,6 +12,7 @@ function Medications() {
     };
     return (
         <div>
+            <Header />
             Medications
             <button onClick={logout}>Sair</button>
         </div>
