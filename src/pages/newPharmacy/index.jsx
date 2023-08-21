@@ -43,14 +43,8 @@ const NewPharmacySchema = z.object({
     }),
 
     geolocalizacao: z.object({
-        latitude: z
-            .string()
-            .nonempty("Latitude é obrigatório")
-            .regex(/^[0-9.,]+$/, "Latitude inválida"),
-        longitude: z
-            .string()
-            .nonempty("Longitude é obrigatório")
-            .regex(/^[0-9.,]+$/, "Longitude inválida"),
+        latitude: z.string().nonempty("Latitude é obrigatório"),
+        longitude: z.string().nonempty("Longitude é obrigatório"),
     }),
 });
 
@@ -95,7 +89,7 @@ function NewPharmacy() {
         <div>
             <Header />
 
-            <main className="container main-new-pharmacy flex-column">
+            <div className="container main-new-pharmacy flex-column">
                 <h2 className="mb-4">Nova Farmácia</h2>
                 <form onSubmit={handleSubmit(onSubmit)} className="row">
                     <div className="col-md-4 mb-3">
@@ -265,7 +259,7 @@ function NewPharmacy() {
                         </button>
                     </div>
                 </form>
-            </main>
+            </div>
         </div>
     );
 }

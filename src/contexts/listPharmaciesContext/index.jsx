@@ -9,7 +9,7 @@ const ListPharmaciesProvider = ({ children }) => {
             : [
                   {
                       id: 1,
-                      razaoSocial: "Farmácia",
+                      razaoSocial: "Farmácia 1",
                       cnpj: "11.111.111/1111-11",
                       nomeFantasia: "Farmácia",
                       email: "farmacia1@example.com",
@@ -24,8 +24,30 @@ const ListPharmaciesProvider = ({ children }) => {
                           estado: "estado 1",
                           complemento: "complemento 1",
                           geolocalizacao: {
-                              latitude: 0,
-                              longitude: 0,
+                              latitude: -27.465523,
+                              longitude: -48.463587,
+                          },
+                      },
+                  },
+                  {
+                      id: 2,
+                      razaoSocial: "Farmácia 2",
+                      cnpj: "22.222.222/2222-22",
+                      nomeFantasia: "Farmácia 2",
+                      email: "farmacia1@example.com",
+                      telefone: "(22) 22222-2222",
+                      celular: "(22) 22222-2222",
+                      endereco: {
+                          cep: "22222-222",
+                          logradouro: "rua 2",
+                          numero: "2",
+                          bairro: "bairro 2",
+                          cidade: "cidade 2",
+                          estado: "estado 2",
+                          complemento: "complemento 2",
+                          geolocalizacao: {
+                              latitude: -27.451342,
+                              longitude: -48.498074,
                           },
                       },
                   },

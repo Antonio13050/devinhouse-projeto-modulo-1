@@ -2,12 +2,26 @@ import React from "react";
 import Header from "../../components/header";
 import { ListPharmaciesContext } from "../../contexts/listPharmaciesContext";
 import { useContext } from "react";
+import Map from "../../components/map";
+
+const address = "Rua das Flores, 300";
 
 function Pharmacies() {
     const { listPharmacies, setListPharmacies, addPharmacy } = useContext(
         ListPharmaciesContext
     );
-    console.log(listPharmacies);
+
+    const positions = listPharmacies.map((pharmacy) => ({
+        id: pharmacy.id,
+        lat: pharmacy.endereco.geolocalizacao.latitude,
+        lng: pharmacy.endereco.geolocalizacao.longitude,
+        razaoSocial: pharmacy.razaoSocial,
+        cnpj: pharmacy.cnpj,
+        nomeFantasia: pharmacy.nomeFantasia,
+        email: pharmacy.email,
+        telefone: pharmacy.telefone,
+        celular: pharmacy.celular,
+    }));
 
     return (
         <div>
@@ -15,9 +29,16 @@ function Pharmacies() {
 
             <div className="container">
                 <h1>Farmácias</h1>
+                <div className="my-4">
+                    <Map
+                        positions={positions}
+                        position={positions[0]}
+                        address={address}
+                    />
+                </div>
                 <div>
                     {listPharmacies.map((pharmacy) => (
-                        <div key={pharmacy.id}>
+                        <div key={pharmacy.id} id={pharmacy.id}>
                             <h4>{pharmacy.nomeFantasia}</h4>
                             <div className="row">
                                 <span className="col-4">
