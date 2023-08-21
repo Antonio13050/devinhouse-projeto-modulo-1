@@ -5,6 +5,7 @@ import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+import "./styles.css";
 
 const NewPharmacySchema = z.object({
     razaoSocial: z.string().nonempty("Razão social é obrigatório"),
@@ -93,101 +94,178 @@ function NewPharmacy() {
     return (
         <div>
             <Header />
-            <form onSubmit={handleSubmit(onSubmit)}>
-                <label>Razão social</label>
-                <input
-                    type="text"
-                    label="Razão social"
-                    {...register("razaoSocial")}
-                />
-                <span>{errors.razaoSocial?.message}</span>
-                <label htmlFor="cnpj">CNPJ</label>
-                <input type="number" label="CNPJ" {...register("cnpj")} />
-                <span>{errors.cnpj?.message}</span>
-                <label htmlFor="nomeFantasia">Nome fantásia</label>
-                <input
-                    type="text"
-                    label="Nome fantásia"
-                    {...register("nomeFantasia")}
-                />
-                <span>{errors.nomeFantasia?.message}</span>
-                <label htmlFor="email">E-mail</label>
-                <input type="email" label="E-mail" {...register("email")} />
-                <span>{errors.email?.message}</span>
-                <label htmlFor="telefone">Telefone</label>
-                <input type="tel" label="Telefone" {...register("telefone")} />
-                <span>{errors.telefone?.message}</span>
-                <label htmlFor="celular">Celular</label>
-                <input type="tel" label="Celular" {...register("celular")} />
-                <span>{errors.celular?.message}</span>
-                <label htmlFor="cep">cep</label>
-                <input
-                    type="number"
-                    label="CEP"
-                    {...register("endereco.cep")}
-                    onBlur={checkCep}
-                    onKeyUp={checkCep}
-                />
-                <span>{errors.endereco?.cep?.message}</span>
-                <label htmlFor="logradouro">Logradouro</label>
-                <input
-                    type="text"
-                    label="Logradouro"
-                    {...register("endereco.logradouro")}
-                />
-                <span>{errors.endereco?.logradouro?.message}</span>
-                <label htmlFor="numero">Numero</label>
-                <input
-                    type="number"
-                    label="Número"
-                    {...register("endereco.numero")}
-                />
-                <span>{errors.endereco?.numero?.message}</span>
-                <label htmlFor="bairro">Bairro</label>
-                <input
-                    type="text"
-                    label="Bairro"
-                    {...register("endereco.bairro")}
-                />
-                <span>{errors.endereco?.bairro?.message}</span>
-                <label htmlFor="cidade">Cidade</label>
-                <input
-                    type="text"
-                    label="Cidade"
-                    {...register("endereco.cidade")}
-                />
-                <span>{errors.endereco?.cidade?.message}</span>
-                <label htmlFor="estado">Estado</label>
-                <input
-                    type="text"
-                    label="Estado"
-                    {...register("endereco.estado")}
-                />
-                <span>{errors.endereco?.estado?.message}</span>
 
-                <label htmlFor="complemento">Complemento</label>
-                <input
-                    type="text"
-                    label="Complemento"
-                    {...register("endereco.complemento")}
-                />
-                <span>{errors.endereco?.complemento?.message}</span>
-                <label htmlFor="latitude">Latitude</label>
-                <input
-                    type="text"
-                    label="Latitude"
-                    {...register("geolocalizacao.latitude")}
-                />
-                <span>{errors.geolocalizacao?.latitude?.message}</span>
-                <label htmlFor="longitude">Longitude</label>
-                <input
-                    type="text"
-                    label="Longitude"
-                    {...register("geolocalizacao.longitude")}
-                />
-                <span>{errors.geolocalizacao?.longitude?.message}</span>
-                <button type="submit">Cadastrar</button>
-            </form>
+            <main className="container main-new-pharmacy flex-column">
+                <h2 className="mb-4">Nova Farmácia</h2>
+                <form onSubmit={handleSubmit(onSubmit)} className="row">
+                    <div class="col-md-4 mb-3">
+                        <label class="form-label">Razão social</label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            {...register("razaoSocial")}
+                        />
+                        <span class="color-red">
+                            {errors.razaoSocial?.message}
+                        </span>
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+                        <label class="form-label">CNPJ</label>
+                        <input
+                            type="number"
+                            className="form-control"
+                            {...register("cnpj")}
+                        />
+                        <span>{errors.cnpj?.message}</span>
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+                        <label class="form-label">Nome fantásia</label>
+                        <input
+                            type="text"
+                            className="form-control"
+                            {...register("nomeFantasia")}
+                        />
+                        <span>{errors.nomeFantasia?.message}</span>
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+                        <label class="form-label">E-mail</label>
+                        <input
+                            type="email"
+                            className="form-control"
+                            {...register("email")}
+                        />
+                        <span>{errors.email?.message}</span>
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+                        <label class="form-label">Telefone</label>
+                        <input
+                            type="tel"
+                            className="form-control"
+                            {...register("telefone")}
+                        />
+                        <span>{errors.telefone?.message}</span>
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+                        <label class="form-label">Celular</label>
+                        <input
+                            type="tel"
+                            className="form-control"
+                            {...register("celular")}
+                        />
+                        <span>{errors.celular?.message}</span>
+                    </div>
+
+                    <hr className="my-4" />
+
+                    <div class="col-md-2 mb-3">
+                        <label class="form-label">CEP</label>
+                        <input
+                            type="number"
+                            className="form-control"
+                            {...register("endereco.cep")}
+                            onBlur={checkCep}
+                            onKeyUp={checkCep}
+                        />
+                        <span>{errors.endereco?.cep?.message}</span>
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+                        <label class="form-label">Logradouro</label>
+                        <input
+                            type="text"
+                            className="form-control"
+                            {...register("endereco.logradouro")}
+                        />
+                        <span>{errors.endereco?.logradouro?.message}</span>
+                    </div>
+
+                    <div class="col-md-2 mb-3">
+                        <label class="form-label">Numero</label>
+                        <input
+                            type="number"
+                            className="form-control"
+                            {...register("endereco.numero")}
+                        />
+                        <span>{errors.endereco?.numero?.message}</span>
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+                        <label class="form-label">Bairro</label>
+                        <input
+                            type="text"
+                            className="form-control"
+                            {...register("endereco.bairro")}
+                        />
+                        <span>{errors.endereco?.bairro?.message}</span>
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+                        <label class="form-label">Cidade</label>
+                        <input
+                            type="text"
+                            className="form-control"
+                            {...register("endereco.cidade")}
+                        />
+                        <span>{errors.endereco?.cidade?.message}</span>
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+                        <label class="form-label">Estado</label>
+                        <input
+                            type="text"
+                            className="form-control"
+                            {...register("endereco.estado")}
+                        />
+                        <span>{errors.endereco?.estado?.message}</span>
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+                        <label class="form-label">Complemento</label>
+                        <input
+                            type="text"
+                            className="form-control"
+                            {...register("endereco.complemento")}
+                        />
+                        <span>{errors.endereco?.complemento?.message}</span>
+                    </div>
+
+                    <hr className="my-4" />
+
+                    <div class="col-md-4 mb-3">
+                        <label class="form-label">Latitude</label>
+                        <input
+                            type="text"
+                            className="form-control"
+                            {...register("geolocalizacao.latitude")}
+                        />
+                        <span>{errors.geolocalizacao?.latitude?.message}</span>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label class="form-label">Longitude</label>
+                        <input
+                            type="text"
+                            className="form-control"
+                            {...register("geolocalizacao.longitude")}
+                        />
+                        <span className=".text-danger span.error">
+                            {errors.geolocalizacao?.longitude?.message}
+                        </span>
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <button
+                            type="submit"
+                            className="btn-form-new-pharmacy btn"
+                        >
+                            Cadastrar
+                        </button>
+                    </div>
+                </form>
+            </main>
         </div>
     );
 }

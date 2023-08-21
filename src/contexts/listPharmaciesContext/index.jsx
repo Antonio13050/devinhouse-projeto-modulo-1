@@ -51,59 +51,6 @@ const ListPharmaciesProvider = ({ children }) => {
         latitude,
         longitude,
     }) => {
-        // if (!razaoSocial) {
-        //     alert("Razão social não informada");
-        //     return;
-        // }
-        // if (!cnpj) {
-        //     alert("CNPJ não informado");
-        //     return;
-        // }
-        // if (!nomeFantasia) {
-        //     alert("Nome fantasia não informado");
-        //     return;
-        // }
-        // if (!email) {
-        //     alert("Email não informado");
-        //     return;
-        // }
-
-        // if (!celular) {
-        //     alert("Celular não informado");
-        //     return;
-        // }
-        // if (!cep) {
-        //     alert("CEP não informado");
-        //     return;
-        // }
-        // if (!logradouro) {
-        //     alert("Logradouro não informado");
-        //     return;
-        // }
-        // if (!numero) {
-        //     alert("Número não informado");
-        //     return;
-        // }
-        // if (!bairro) {
-        //     alert("Bairro não informado");
-        //     return;
-        // }
-        // if (!cidade) {
-        //     alert("Cidade não informado");
-        //     return;
-        // }
-        // if (!estado) {
-        //     alert("Estado não informado");
-        //     return;
-        // }
-        // if (!latitude) {
-        //     alert("Latitude não informado");
-        //     return;
-        // }
-        // if (!longitude) {
-        //     alert("Longitude não informado");
-        //     return;
-        // }
         const newPharmacy = {
             id: listPharmacies.length + 1,
             razaoSocial,

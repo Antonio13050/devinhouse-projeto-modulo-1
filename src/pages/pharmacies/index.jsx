@@ -12,7 +12,6 @@ function Pharmacies() {
     return (
         <div>
             <Header />
-            NewPharmacy
             {listPharmacies.map((pharmacy) => (
                 <div key={pharmacy.id}>
                     {pharmacy.razaoSocial}

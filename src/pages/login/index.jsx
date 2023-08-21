@@ -39,7 +39,10 @@ function Login() {
             <main className="text-center container flex-column">
                 <h1 className="h1 mb-5 fw-normal">Bem vindo a DEVinPharmacy</h1>
                 <div className="form-signin">
-                    <form onSubmit={handleSubmit(onSubmit)} className="p-5">
+                    <form
+                        onSubmit={handleSubmit(onSubmit)}
+                        className="p-5 form-login"
+                    >
                         <h1 className="h3 mb-3 fw-normal">
                             Entrar com e-mail e senha
                         </h1>

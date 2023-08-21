@@ -7,10 +7,6 @@ main {
     max-width: 100px;
     height: 100vh;
 }
-form {
-    border: 1px solid #009739;
-    border-radius: 15px;
-}
 
 form .btn-login {
     background: #009739;

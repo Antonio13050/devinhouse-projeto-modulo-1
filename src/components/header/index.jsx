@@ -27,7 +27,7 @@ function Header() {
         },
     ];
     return (
-        <header>
+        <header className="pb-3">
             <nav class="navbar navbar-expand-lg bg-light px-3">
                 <div class="container-fluid">
                     <a class="navbar-brand">

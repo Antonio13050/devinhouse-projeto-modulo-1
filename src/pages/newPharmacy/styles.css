@@ -1,0 +1,24 @@
+.main-new-pharmacy {
+    position: relative;
+    top: 100px;
+    height: 100vh;
+}
+
+form .btn-form-new-pharmacy {
+    background: #009739;
+    color: #fff;
+}
+
+form .btn-form-new-pharmacy:hover {
+    background: #009739;
+    color: #fff;
+}
+
+form .btn-form-new-pharmacy:active {
+    background: #009739;
+    color: #fff;
+}
+
+.span.error {
+    color: red;
+}
