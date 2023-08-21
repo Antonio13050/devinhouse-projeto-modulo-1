@@ -98,20 +98,20 @@ function NewPharmacy() {
             <main className="container main-new-pharmacy flex-column">
                 <h2 className="mb-4">Nova Farmácia</h2>
                 <form onSubmit={handleSubmit(onSubmit)} className="row">
-                    <div class="col-md-4 mb-3">
-                        <label class="form-label">Razão social</label>
+                    <div className="col-md-4 mb-3">
+                        <label className="form-label">Razão social</label>
                         <input
                             type="text"
-                            class="form-control"
+                            className="form-control"
                             {...register("razaoSocial")}
                         />
-                        <span class="color-red">
+                        <span className="color-red">
                             {errors.razaoSocial?.message}
                         </span>
                     </div>
 
-                    <div class="col-md-4 mb-3">
-                        <label class="form-label">CNPJ</label>
+                    <div className="col-md-4 mb-3">
+                        <label className="form-label">CNPJ</label>
                         <input
                             type="number"
                             className="form-control"
@@ -120,8 +120,8 @@ function NewPharmacy() {
                         <span>{errors.cnpj?.message}</span>
                     </div>
 
-                    <div class="col-md-4 mb-3">
-                        <label class="form-label">Nome fantásia</label>
+                    <div className="col-md-4 mb-3">
+                        <label className="form-label">Nome fantásia</label>
                         <input
                             type="text"
                             className="form-control"
@@ -130,8 +130,8 @@ function NewPharmacy() {
                         <span>{errors.nomeFantasia?.message}</span>
                     </div>
 
-                    <div class="col-md-4 mb-3">
-                        <label class="form-label">E-mail</label>
+                    <div className="col-md-4 mb-3">
+                        <label className="form-label">E-mail</label>
                         <input
                             type="email"
                             className="form-control"
@@ -140,8 +140,8 @@ function NewPharmacy() {
                         <span>{errors.email?.message}</span>
                     </div>
 
-                    <div class="col-md-4 mb-3">
-                        <label class="form-label">Telefone</label>
+                    <div className="col-md-4 mb-3">
+                        <label className="form-label">Telefone</label>
                         <input
                             type="tel"
                             className="form-control"
@@ -150,8 +150,8 @@ function NewPharmacy() {
                         <span>{errors.telefone?.message}</span>
                     </div>
 
-                    <div class="col-md-4 mb-3">
-                        <label class="form-label">Celular</label>
+                    <div className="col-md-4 mb-3">
+                        <label className="form-label">Celular</label>
                         <input
                             type="tel"
                             className="form-control"
@@ -162,8 +162,8 @@ function NewPharmacy() {
 
                     <hr className="my-4" />
 
-                    <div class="col-md-2 mb-3">
-                        <label class="form-label">CEP</label>
+                    <div className="col-md-2 mb-3">
+                        <label className="form-label">CEP</label>
                         <input
                             type="number"
                             className="form-control"
@@ -174,8 +174,8 @@ function NewPharmacy() {
                         <span>{errors.endereco?.cep?.message}</span>
                     </div>
 
-                    <div class="col-md-4 mb-3">
-                        <label class="form-label">Logradouro</label>
+                    <div className="col-md-4 mb-3">
+                        <label className="form-label">Logradouro</label>
                         <input
                             type="text"
                             className="form-control"
@@ -184,8 +184,8 @@ function NewPharmacy() {
                         <span>{errors.endereco?.logradouro?.message}</span>
                     </div>
 
-                    <div class="col-md-2 mb-3">
-                        <label class="form-label">Numero</label>
+                    <div className="col-md-2 mb-3">
+                        <label className="form-label">Numero</label>
                         <input
                             type="number"
                             className="form-control"
@@ -194,8 +194,8 @@ function NewPharmacy() {
                         <span>{errors.endereco?.numero?.message}</span>
                     </div>
 
-                    <div class="col-md-4 mb-3">
-                        <label class="form-label">Bairro</label>
+                    <div className="col-md-4 mb-3">
+                        <label className="form-label">Bairro</label>
                         <input
                             type="text"
                             className="form-control"
@@ -204,8 +204,8 @@ function NewPharmacy() {
                         <span>{errors.endereco?.bairro?.message}</span>
                     </div>
 
-                    <div class="col-md-4 mb-3">
-                        <label class="form-label">Cidade</label>
+                    <div className="col-md-4 mb-3">
+                        <label className="form-label">Cidade</label>
                         <input
                             type="text"
                             className="form-control"
@@ -214,8 +214,8 @@ function NewPharmacy() {
                         <span>{errors.endereco?.cidade?.message}</span>
                     </div>
 
-                    <div class="col-md-4 mb-3">
-                        <label class="form-label">Estado</label>
+                    <div className="col-md-4 mb-3">
+                        <label className="form-label">Estado</label>
                         <input
                             type="text"
                             className="form-control"
@@ -224,8 +224,8 @@ function NewPharmacy() {
                         <span>{errors.endereco?.estado?.message}</span>
                     </div>
 
-                    <div class="col-md-4 mb-3">
-                        <label class="form-label">Complemento</label>
+                    <div className="col-md-4 mb-3">
+                        <label className="form-label">Complemento</label>
                         <input
                             type="text"
                             className="form-control"
@@ -236,8 +236,8 @@ function NewPharmacy() {
 
                     <hr className="my-4" />
 
-                    <div class="col-md-4 mb-3">
-                        <label class="form-label">Latitude</label>
+                    <div className="col-md-4 mb-3">
+                        <label className="form-label">Latitude</label>
                         <input
                             type="text"
                             className="form-control"
@@ -245,8 +245,8 @@ function NewPharmacy() {
                         />
                         <span>{errors.geolocalizacao?.latitude?.message}</span>
                     </div>
-                    <div class="col-md-4 mb-3">
-                        <label class="form-label">Longitude</label>
+                    <div className="col-md-4 mb-3">
+                        <label className="form-label">Longitude</label>
                         <input
                             type="text"
                             className="form-control"
@@ -256,7 +256,7 @@ function NewPharmacy() {
                             {errors.geolocalizacao?.longitude?.message}
                         </span>
                     </div>
-                    <div class="col-md-12 mb-3">
+                    <div className="col-md-12 mb-3">
                         <button
                             type="submit"
                             className="btn-form-new-pharmacy btn"

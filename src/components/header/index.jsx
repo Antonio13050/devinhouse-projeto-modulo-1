@@ -28,29 +28,19 @@ function Header() {
     ];
     return (
         <header className="pb-3">
-            <nav class="navbar navbar-expand-lg bg-light px-3">
-                <div class="container-fluid">
-                    <a class="navbar-brand">
-                        <Link className="navbar-brand" to={"/"}>
-                            <img
-                                src={logo}
-                                alt="Logo"
-                                style={{ width: "200px" }}
-                            />
-                        </Link>
+            <nav className="navbar navbar-expand-lg bg-light px-3">
+                <div className="container-fluid">
+                    <a className="navbar-brand" href="/">
+                        <img src={logo} alt="Logo" style={{ width: "200px" }} />
                     </a>
-                    <div class="">
-                        <div class="navbar-nav">
+                    <div className="">
+                        <div className="navbar-nav">
                             {pages.map((page, key) => (
-                                <a class="nav-link">
-                                    <Link
-                                        className="nav-link"
-                                        key={key}
-                                        to={page.route}
-                                    >
+                                <div className="nav-link" href="#" key={key}>
+                                    <Link className="nav-link" to={page.route}>
                                         {page.description}
                                     </Link>
-                                </a>
+                                </div>
                             ))}
                         </div>
                     </div>

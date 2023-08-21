@@ -32,48 +32,31 @@ const ListPharmaciesProvider = ({ children }) => {
               ]
     );
 
-    const addPharmacy = ({
-        razaoSocial,
-        cnpj,
-        nomeFantasia,
-        email,
-        telefone,
-        celular,
-        endereco,
-        cep,
-        logradouro,
-        numero,
-        bairro,
-        cidade,
-        estado,
-        complemento,
-        geolocalizacao,
-        latitude,
-        longitude,
-    }) => {
+    const addPharmacy = (data) => {
+        console.log(data);
         const newPharmacy = {
             id: listPharmacies.length + 1,
-            razaoSocial,
-            cnpj,
-            nomeFantasia,
-            email,
-            telefone,
-            celular,
+            razaoSocial: data.razaoSocial,
+            cnpj: data.cnpj,
+            nomeFantasia: data.nomeFantasia,
+            email: data.email,
+            telefone: data.telefone,
+            celular: data.celular,
             endereco: {
-                cep,
-                logradouro,
-                numero,
-                bairro,
-                cidade,
-                estado,
-                complemento,
+                cep: data.endereco.cep,
+                logradouro: data.endereco.logradouro,
+                numero: data.endereco.numero,
+                bairro: data.endereco.bairro,
+                cidade: data.endereco.cidade,
+                estado: data.endereco.estado,
+                complemento: data.endereco.complemento,
                 geolocalizacao: {
-                    latitude,
-                    longitude,
+                    latitude: data.geolocalizacao.latitude,
+                    longitude: data.geolocalizacao.longitude,
                 },
             },
         };
-
+        console.log(newPharmacy);
         const newListPharmacies = [...listPharmacies, newPharmacy];
         setListPharmacies(newListPharmacies);
         localStorage.setItem(
