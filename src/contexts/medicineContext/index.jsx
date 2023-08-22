@@ -29,7 +29,21 @@ const ListMedicineProvider = ({ children }) => {
               ]
     );
     const addMedicine = (medicine) => {
-        console.log(medicine);
+        const newMedicine = {
+            id: listMedicine.length + 1,
+            name: medicine.name,
+            laboratory: medicine.laboratory,
+            dosage: medicine.dosage,
+            type: medicine.type,
+            price: medicine.price,
+            description: medicine.description,
+        };
+        setListMedicine([...listMedicine, newMedicine]);
+        localStorage.setItem(
+            "listMedicine",
+            JSON.stringify([...listMedicine, newMedicine])
+        );
+        alert("Cadastrado com sucesso");
     };
     return (
         <ListMedicineContext.Provider value={{ listMedicine, addMedicine }}>
