@@ -8,7 +8,7 @@ import { ListMedicineContext } from "../../contexts/medicineContext";
 import { useContext } from "react";
 
 const newMedicineSchema = z.object({
-    medicine: z.string().nonempty("Medicamento é obrigatório"),
+    name: z.string().nonempty("Medicamento é obrigatório"),
     laboratory: z.string().nonempty("Laboratório é obrigatório"),
     dosage: z.string().nonempty("Dosagem é obrigatório"),
     type: z.string().nonempty("Tipo é obrigatório"),
@@ -41,7 +41,7 @@ function NewMedication() {
                         <input
                             type="text"
                             className="form-control"
-                            {...register("medicine")}
+                            {...register("name")}
                         />
                         <span className="color-red">
                             {errors.medicine?.message}
@@ -72,8 +72,8 @@ function NewMedication() {
                     <div className="col-md-4 mb-3">
                         <label className="form-label">Tipo</label>
                         <select className="form-select" {...register("type")}>
-                            <option value="fitoterapico">Fitoterápico</option>
-                            <option value="homeopatico">Homeopático</option>
+                            <option value="controlado">Controlado</option>
+                            <option value="comum">Comum</option>
                         </select>
                         <span className="color-red">
                             {errors.type?.message}

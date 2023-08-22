@@ -100,7 +100,6 @@ const ListPharmaciesProvider = ({ children }) => {
                 },
             },
         };
-        console.log(newPharmacy);
         const newListPharmacies = [...listPharmacies, newPharmacy];
         setListPharmacies(newListPharmacies);
         localStorage.setItem(

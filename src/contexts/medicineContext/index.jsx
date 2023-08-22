@@ -13,7 +13,7 @@ const ListMedicineProvider = ({ children }) => {
                       laboratory: "Laboratório 1",
                       dosage: "Dosagem 1",
                       type: "Tipo 1",
-                      price: "Preço 1",
+                      price: "3,99",
                       description: "Descrição 1",
                   },
                   {
@@ -22,7 +22,7 @@ const ListMedicineProvider = ({ children }) => {
                       laboratory: "Laboratório 2",
                       dosage: "Dosagem 2",
                       type: "Tipo 2",
-                      price: "Preço 2",
+                      price: "4,99",
 
                       description: "Descrição 2",
                   },
@@ -38,11 +38,9 @@ const ListMedicineProvider = ({ children }) => {
             price: medicine.price,
             description: medicine.description,
         };
-        setListMedicine([...listMedicine, newMedicine]);
-        localStorage.setItem(
-            "listMedicine",
-            JSON.stringify([...listMedicine, newMedicine])
-        );
+        const newListMedicine = [...listMedicine, newMedicine];
+        setListMedicine(newListMedicine);
+        localStorage.setItem("listMedicine", JSON.stringify(newListMedicine));
         alert("Cadastrado com sucesso");
     };
     return (

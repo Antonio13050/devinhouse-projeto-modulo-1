@@ -28,7 +28,7 @@ function Pharmacies() {
             <Header />
 
             <div className="container">
-                <h1>Farmácias</h1>
+                <h2>Farmácias</h2>
                 <div className="my-4">
                     <Map
                         positions={positions}
