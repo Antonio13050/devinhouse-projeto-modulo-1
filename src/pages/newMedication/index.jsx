@@ -4,6 +4,8 @@ import { useForm } from "react-hook-form";
 import "./styles.css";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { ListMedicineContext } from "../../contexts/medicineContext";
+import { useContext } from "react";
 
 const newMedicineSchema = z.object({
     medicine: z.string().nonempty("Medicamento é obrigatório"),
@@ -15,6 +17,7 @@ const newMedicineSchema = z.object({
 });
 
 function NewMedication() {
+    const { addMedicine } = useContext(ListMedicineContext);
     const {
         register,
         handleSubmit,
@@ -24,7 +27,7 @@ function NewMedication() {
     });
 
     const onSubmit = (data) => {
-        console.log(data);
+        addMedicine(data);
     };
     return (
         <div>
