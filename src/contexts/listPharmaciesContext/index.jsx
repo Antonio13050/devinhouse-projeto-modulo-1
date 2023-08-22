@@ -51,6 +51,28 @@ const ListPharmaciesProvider = ({ children }) => {
                           },
                       },
                   },
+                  {
+                      id: 3,
+                      razaoSocial: "Farmácia 3",
+                      cnpj: "33.333.333/3333-33",
+                      nomeFantasia: "Farmácia 3",
+                      email: "farmacia1@example.com",
+                      telefone: "(33) 33333-3333",
+                      celular: "(33) 33333-3333",
+                      endereco: {
+                          cep: "33333-333",
+                          logradouro: "rua 3",
+                          numero: "3",
+                          bairro: "bairro 3",
+                          cidade: "cidade 3",
+                          estado: "estado 3",
+                          complemento: "complemento 3",
+                          geolocalizacao: {
+                              latitude: -27.493138,
+                              longitude: -48.505931,
+                          },
+                      },
+                  },
               ]
     );
 

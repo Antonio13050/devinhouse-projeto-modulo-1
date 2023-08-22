@@ -1,0 +1,18 @@
+form .btn-form-new-medication {
+    background: #009739;
+    color: #fff;
+}
+
+form .btn-form-new-medication:hover {
+    background: #009739;
+    color: #fff;
+}
+
+form .btn-form-new-medication:active {
+    background: #009739;
+    color: #fff;
+}
+
+form div span {
+    color: red;
+}

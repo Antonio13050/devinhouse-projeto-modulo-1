@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import Medications from "../pages/medications";
 import NewPharmacy from "../pages/newPharmacy";
 import Pharmacies from "../pages/pharmacies";
+import NewMedication from "../pages/newMedication";
 
 function PrivateRoutes() {
     return (
@@ -9,6 +10,7 @@ function PrivateRoutes() {
             <Route path="/" element={<Medications />} />
             <Route path="/newpharmacy" element={<NewPharmacy />} />
             <Route path="/pharmacies" element={<Pharmacies />} />
+            <Route path="/novomedicamento" element={<NewMedication />} />
             <Route path="*" element={<p>Path not resolved</p>} />
         </Routes>
     );

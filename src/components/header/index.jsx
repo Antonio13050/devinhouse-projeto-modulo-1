@@ -15,15 +15,19 @@ function Header() {
     const pages = [
         {
             route: "/",
-            description: "Medications",
+            description: "Medicamentos",
         },
         {
-            route: "/newpharmacy",
-            description: "New Pharmacy",
+            route: "/novomedicamento",
+            description: "Cadastrar Medicamento",
         },
         {
             route: "/pharmacies",
-            description: "Pharmacys",
+            description: "Farmácias",
+        },
+        {
+            route: "/newpharmacy",
+            description: "Cadastrar Farmácia",
         },
     ];
     return (
