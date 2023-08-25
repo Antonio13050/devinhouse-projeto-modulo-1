@@ -4,11 +4,10 @@ import { ListMedicineContext } from "../../contexts/medicineContext";
 import { useContext } from "react";
 import "./styles.css";
 import img from "../../assets/img.jpg";
+import { Link } from "react-router-dom";
 
 function Medications() {
     const { listMedicine } = useContext(ListMedicineContext);
-    console.log(listMedicine);
-
     return (
         <div>
             <Header />
@@ -42,7 +41,9 @@ function Medications() {
                                     <p className="card-description">
                                         {medicine.description}
                                     </p>
-                                    <a href="">Mais informações</a>
+                                    <Link to={`/medicamento/${medicine.id}`}>
+                                        Mais detalhes
+                                    </Link>
                                 </div>
                             </div>
                         </div>

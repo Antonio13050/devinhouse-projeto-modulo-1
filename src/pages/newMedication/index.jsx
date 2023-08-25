@@ -44,7 +44,7 @@ function NewMedication() {
                             {...register("name")}
                         />
                         <span className="color-red">
-                            {errors.medicine?.message}
+                            {errors.name?.message}
                         </span>
                     </div>
                     <div className="col-md-6 mb-3">
