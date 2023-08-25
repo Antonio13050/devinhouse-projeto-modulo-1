@@ -30,6 +30,7 @@
 }
 .card-description {
     max-height: 50px;
+    height: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;

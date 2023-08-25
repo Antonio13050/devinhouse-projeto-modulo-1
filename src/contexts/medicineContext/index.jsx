@@ -9,7 +9,7 @@ const ListMedicineProvider = ({ children }) => {
             : [
                   {
                       id: 1,
-                      name: "Medicamento 1",
+                      name: "Paracetamol",
                       laboratory: "Laboratório 1",
                       dosage: "Dosagem 1",
                       type: "Tipo 1",
@@ -19,7 +19,7 @@ const ListMedicineProvider = ({ children }) => {
                   },
                   {
                       id: 2,
-                      name: "Medicamento 2",
+                      name: "Ibuprofeno",
                       laboratory: "Laboratório 2",
                       dosage: "Dosagem 2",
                       type: "Tipo 2",
