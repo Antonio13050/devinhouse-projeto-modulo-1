@@ -20,7 +20,7 @@ function Login() {
         resolver: zodResolver(formLoginchema),
     });
 
-    const { users, setIsLogged } = useContext(UserContext);
+    const { users, setIsLogged, setUserLogged } = useContext(UserContext);
 
     const onSubmit = (data) => {
         const userExists = users.find((user) => user.email === data.email);
@@ -32,6 +32,8 @@ function Login() {
         alert("Usuário logado");
         setIsLogged(true);
         localStorage.setItem("isLogged", true);
+        setUserLogged(userExists);
+        localStorage.setItem("userLogged", JSON.stringify(userExists));
     };
 
     return (

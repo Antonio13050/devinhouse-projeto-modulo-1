@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import Login from "../pages/login";
+import UserRegistration from "../pages/userRegistration";
 
 function PublicRoutes() {
     return (

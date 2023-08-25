@@ -6,11 +6,13 @@ import "./styles.css";
 import logo from "../../assets/logo.png";
 
 function Header() {
-    const { setIsLogged } = useContext(UserContext);
+    const { setIsLogged, userLogged, setUserLogged } = useContext(UserContext);
 
     const logout = () => {
         setIsLogged(false);
         localStorage.setItem("isLogged", false);
+        setUserLogged(null);
+        localStorage.removeItem("userLogged");
     };
     const pages = [
         {
@@ -28,6 +30,10 @@ function Header() {
         {
             route: "/newpharmacy",
             description: "Cadastrar Farmácia",
+        },
+        {
+            route: "/cadastrousuario",
+            description: "Cadastrar Usuário",
         },
     ];
     return (
@@ -48,6 +54,7 @@ function Header() {
                             ))}
                         </div>
                     </div>
+                    <span>{userLogged?.name}</span>
                     <button className="btn btn-danger" onClick={logout}>
                         Sair
                     </button>
