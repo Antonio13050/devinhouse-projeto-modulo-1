@@ -36,15 +36,17 @@ function Medications() {
                 <h2>Medicamentos</h2>
                 <input
                     type="text"
-                    placeholder="Pesquisar"
+                    placeholder="Pesquise pelo nome do medicamento"
                     className="form-control my-3"
                     onChange={handleFilter}
                     value={filterMedicine}
                 />
                 {error && (
                     <div>
-                        <h4>{error}</h4>
-                        <h5>Confira a lista com todos os medicamentos</h5>
+                        <h2 className="text-center">{error}</h2>
+                        <h5 className="my-5 text-center">
+                            Confira outros medicamentos
+                        </h5>
                     </div>
                 )}
                 <div className="box-container">

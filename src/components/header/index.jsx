@@ -24,11 +24,11 @@ function Header() {
             description: "Cadastrar Medicamento",
         },
         {
-            route: "/pharmacies",
+            route: "/farmacias",
             description: "Farmácias",
         },
         {
-            route: "/newpharmacy",
+            route: "/novafarmacia",
             description: "Cadastrar Farmácia",
         },
         {

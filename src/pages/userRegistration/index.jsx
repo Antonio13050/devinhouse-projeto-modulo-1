@@ -5,6 +5,7 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useContext } from "react";
 import { UserContext } from "../../contexts/userContext";
+import "./styles.css";
 
 function UserRegistration() {
     const { users, addUser } = useContext(UserContext);

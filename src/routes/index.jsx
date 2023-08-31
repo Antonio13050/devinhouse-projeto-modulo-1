@@ -5,7 +5,7 @@ import { useContext } from "react";
 
 function RoutesApp() {
     const { isLogged } = useContext(UserContext);
-    if (isLogged == false) {
+    if (!isLogged) {
         return <PublicRoutes />;
     }
     return <PrivateRoutes />;

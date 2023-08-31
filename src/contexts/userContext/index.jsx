@@ -29,10 +29,9 @@ const UserProvider = ({ children }) => {
     }
 
     const localStorageIsLogged = localStorage.getItem("isLogged");
+    console.log(localStorageIsLogged);
 
-    const [isLogged, setIsLogged] = useState(
-        localStorageIsLogged == "true" ? true : false
-    );
+    const [isLogged, setIsLogged] = useState(localStorageIsLogged == "true");
 
     const localStorageUserLogged = localStorage.getItem("userLogged");
     const [userLogged, setUserLogged] = useState(

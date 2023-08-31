@@ -10,8 +10,8 @@ function PrivateRoutes() {
     return (
         <Routes>
             <Route path="/" element={<Medications />} />
-            <Route path="/newpharmacy" element={<NewPharmacy />} />
-            <Route path="/pharmacies" element={<Pharmacies />} />
+            <Route path="/novafarmacia" element={<NewPharmacy />} />
+            <Route path="/farmacias" element={<Pharmacies />} />
             <Route path="/novomedicamento" element={<NewMedication />} />
             <Route path="medicamento/:id" element={<MedicationDetails />} />
             <Route path="/cadastrousuario" element={<UserRegistration />} />
