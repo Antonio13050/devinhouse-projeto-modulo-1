@@ -70,7 +70,6 @@ function NewPharmacy() {
             return;
         }
         const cep = e.target.value.replace(/|D/g, "");
-        console.log(cep);
         fetch(`https://viacep.com.br/ws/${cep}/json`)
             .then((response) => response.json())
             .then((data) => {

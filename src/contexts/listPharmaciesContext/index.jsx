@@ -77,7 +77,6 @@ const ListPharmaciesProvider = ({ children }) => {
     );
 
     const addPharmacy = (data) => {
-        console.log(data);
         const newPharmacy = {
             id: listPharmacies.length + 1,
             razaoSocial: data.razaoSocial,

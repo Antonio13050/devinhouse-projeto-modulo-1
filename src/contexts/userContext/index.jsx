@@ -29,7 +29,6 @@ const UserProvider = ({ children }) => {
     }
 
     const localStorageIsLogged = localStorage.getItem("isLogged");
-    console.log(localStorageIsLogged);
 
     const [isLogged, setIsLogged] = useState(localStorageIsLogged == "true");
 
@@ -50,7 +49,6 @@ const UserProvider = ({ children }) => {
         localStorage.setItem("users", JSON.stringify(newListUsers));
         alert("Cadastrado com sucesso");
     };
-    console.log(users);
 
     return (
         <UserContext.Provider
