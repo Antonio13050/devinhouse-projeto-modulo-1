@@ -5,6 +5,7 @@ import { useContext } from "react";
 import "./styles.css";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+import logo from "../../assets/logo.png";
 
 const formLoginchema = z.object({
     email: z.string().nonempty("Digite o e-mail").email("E-mail inválido"),
@@ -39,6 +40,7 @@ function Login() {
     return (
         <>
             <main className="text-center container flex-column">
+                <img src={logo} alt="Logo" className="mb-5" />
                 <h1 className="h1 mb-5 fw-normal">Bem vindo a DEVinPharmacy</h1>
                 <div className="form-signin">
                     <form
